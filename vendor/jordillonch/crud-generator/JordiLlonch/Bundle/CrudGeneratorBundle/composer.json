@@ -1,0 +1,34 @@
+{
+    "name": "jordillonch/crud-generator",
+    "description": "This bundle generates a nice CRUD",
+    "keywords": ["crud", "generator"],
+    "homepage": "https://github.com/jordillonch/CrudGeneratorBundle",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jordi Llonch",
+            "email": "llonch.jordi@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/symfony": ">2.2.0, <2.6-dev",
+        "sensio/generator-bundle": ">2.2.0, <2.4-dev",
+        "pagerfanta/pagerfanta": "1.0.*@dev",
+        "lexik/form-filter-bundle": "2.0.*",
+        "doctrine/orm": ">=2.2.3,<2.5-dev"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.1.*"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-0": { "JordiLlonch\\Bundle\\CrudGeneratorBundle": "" }
+    },
+    "target-dir": "JordiLlonch/Bundle/CrudGeneratorBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.3.x-dev"
+        }
+    }
+}
