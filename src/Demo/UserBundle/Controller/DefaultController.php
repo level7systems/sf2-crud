@@ -2,18 +2,18 @@
 
 namespace Demo\UserBundle\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class DefaultController extends Controller
 {
     /**
-     * @Route("/hello/{name}")
-     * @Template()
+     * @Route("/")
      */
-    public function indexAction($name)
+    public function indexAction()
     {
-        return array('name' => $name);
+        $redirectUrl = $this->get('router')->generate('user');
+        return new RedirectResponse($redirectUrl);
     }
 }
